@@ -238,6 +238,15 @@ EOD;
                 }
             ]);
         }
+        
+        // unix socket
+        $dbConfig->unixSocket = $this->prompt('Database socket:', [
+            'required' => true,
+            'default' => null,
+            'validator' => function(string $input): bool {
+                return true;
+            }
+        ]);
 
         userCredentials:
 
